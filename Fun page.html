@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Science is Fun!</title>
+  <style>
+    body {
+      background-color: #fdf6e3;
+      font-family: Comic Sans MS, cursive, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .fact-box {
+      background-color: #fff3cd;
+      padding: 15px;
+      margin: 20px 0;
+      border: 2px dashed #ffa500;
+      border-radius: 10px;
+      font-size: 1.2em;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    footer {
+      background-color: #ffcc80;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 1em;
+    }
+  </style>
+  <script>
+    function surpriseFact() {
+      const facts = [
+        "Bananas are radioactive!",
+        "A teaspoon of a neutron star weighs 6 billion tons!",
+        "Octopuses have three hearts!",
+        "Space smells like seared steak!",
+        "Sharks existed before trees!"
+      ];
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('random-fact').textContent = fact;
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Science is Fun! </h1>
+    <p>Let’s explore some wacky and wild science facts! </p>
+  </header>
+
+  <div class="container">
+    <div class="fact-box">
+      <strong>Did you know?</strong> The Eiffel Tower can be 15 cm taller during hot days!
+    </div>
+
+    <div class="fact-box">
+      <strong>Surprise Me!</strong>
+      <p id="random-fact">Click the button to reveal a fun science fact.</p>
+      <button onclick="surpriseFact()">Get Random Fact</button>
+    </div>
+  </div>
+
+  <footer>
+    Made with curiosity and stardust &copy; 2025
+  </footer>
+
+</body>
+</html>
