@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accident Report Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Accident Report Form</h2>
+  <form action="/submit-report" method="post">
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="date">Date of Accident</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="location">Location of Accident</label>
+    <input type="text" id="location" name="location" required>
+
+    <label for="description">Description of the Incident</label>
+    <textarea id="description" name="description" rows="4" required></textarea>
+
+    <label for="injuries">Injuries Sustained</label>
+    <textarea id="injuries" name="injuries" rows="2"></textarea>
+
+    <label for="witnesses">Witnesses (if any)</label>
+    <textarea id="witnesses" name="witnesses" rows="2"></textarea>
+
+    <button type="submit">Submit Report</button>
+  </form>
+</div>
+
+</body>
+</html>
