@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Magic Button</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #0f0f0f;
+      margin: 0;
+    }
+
+    .magic-button {
+      padding: 15px 40px;
+      font-size: 18px;
+      color: white;
+      background: linear-gradient(45deg, #6a00ff, #c300ff);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #c300ff, 0 0 20px #6a00ff;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: pulse 2s infinite;
+    }
+
+    .magic-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #ff00ff, 0 0 30px #aa00ff;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 10px #c300ff, 0 0 20px #6a00ff;
+      }
+      50% {
+        box-shadow: 0 0 20px #ff00ff, 0 0 40px #aa00ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="magic-button" onclick="alert('Magic!')">Magic Button</button>
+</body>
+</html>
