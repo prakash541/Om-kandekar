@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aeroplane Launch</title>
+  <style>
+    body {
+      margin: 0;
+      background: skyblue;
+      overflow: hidden;
+    }
+    .aeroplane {
+      position: absolute;
+      width: 100px;
+      top: 50%;
+      left: -100px;
+      transform: translateY(-50%);
+      transition: left 5s linear;
+    }
+    button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="launchPlane()">Launch Plane</button>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Airplane_silhouette.png" alt="Aeroplane" class="aeroplane" id="plane">
+
+  <script>
+    function launchPlane() {
+      const plane = document.getElementById("plane");
+      plane.style.left = "100vw";
+    }
+  </script>
+</body>
+</html>
