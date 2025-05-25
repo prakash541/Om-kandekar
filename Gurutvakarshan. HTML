@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gurutvakarshan (Gravity Simulation)</title>
+  <style>
+    body {
+      margin: 0;
+      background: #eef;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .ball {
+      width: 50px;
+      height: 50px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="ball" id="ball"></div>
+
+  <script>
+    const ball = document.getElementById("ball");
+    let position = 0;
+    let velocity = 0;
+    const gravity = 0.5;
+
+    function fall() {
+      velocity += gravity;
+      position += velocity;
+      if (position + 50 < window.innerHeight) {
+        ball.style.top = position + "px";
+        requestAnimationFrame(fall);
+      } else {
+        ball.style.top = (window.innerHeight - 50) + "px"; // Stop at bottom
+      }
+    }
+
+    fall();
+  </script>
+</body>
+</html>
