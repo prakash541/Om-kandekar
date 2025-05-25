@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Same Last Digit Game</title>
+</head>
+<body>
+  <h1>Same Last Digit Game</h1>
+  <input type="number" id="playerNumber" placeholder="Enter your number" />
+  <button onclick="playGame()">Play</button>
+  <p id="result"></p>
+
+  <script>
+    function playGame() {
+      const playerNum = document.getElementById("playerNumber").value;
+      const computerNum = Math.floor(Math.random() * 100); // Random number between 0-99
+
+      const playerLastDigit = playerNum % 10;
+      const computerLastDigit = computerNum % 10;
+
+      let resultText = `Your number: ${playerNum}, Computer's number: ${computerNum}<br>`;
+
+      if (playerLastDigit == computerLastDigit) {
+        resultText += "You win! Same last digit.";
+      } else {
+        resultText += "You lose! Different last digits.";
+      }
+
+      document.getElementById("result").innerHTML = resultText;
+    }
+  </script>
+</body>
+</html>
