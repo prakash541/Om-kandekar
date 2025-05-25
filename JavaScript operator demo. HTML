@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Operators Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    pre { background: #f4f4f4; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Operators Demo</h1>
+  <pre id="output"></pre>
+
+  <script>
+    let output = '';
+
+    // Arithmetic Operators
+    let a = 10, b = 3;
+    output += 'Arithmetic Operators:\n';
+    output += `a + b = ${a + b}\n`;
+    output += `a - b = ${a - b}\n`;
+    output += `a * b = ${a * b}\n`;
+    output += `a / b = ${a / b}\n`;
+    output += `a % b = ${a % b}\n\n`;
+
+    // Comparison Operators
+    output += 'Comparison Operators:\n';
+    output += `a == b: ${a == b}\n`;
+    output += `a != b: ${a != b}\n`;
+    output += `a > b: ${a > b}\n`;
+    output += `a < b: ${a < b}\n\n`;
+
+    // Logical Operators
+    let x = true, y = false;
+    output += 'Logical Operators:\n';
+    output += `x && y: ${x && y}\n`;
+    output += `x || y: ${x || y}\n`;
+    output += `!x: ${!x}\n\n`;
+
+    // Assignment Operators
+    output += 'Assignment Operators:\n';
+    let c = 5;
+    output += `c = 5: ${c}\n`;
+    c += 3;
+    output += `c += 3: ${c}\n`;
+    c *= 2;
+    output += `c *= 2: ${c}\n`;
+
+    // Output to page
+    document.getElementById('output').innerText = output;
+  </script>
+</body>
+</html>
