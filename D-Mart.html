@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D-Mart Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2e8b57;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      max-height: 150px;
+    }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>D-Mart Online Shopping</h1>
+    <p>Get the best deals on groceries and more!</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Groceries</a>
+    <a href="#">Household</a>
+    <a href="#">Offers</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Product 1">
+      <h3>Rice (5kg)</h3>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Product 2">
+      <h3>Sunflower Oil (1L)</h3>
+      <p>₹149</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Product 3">
+      <h3>Toor Dal (1kg)</h3>
+      <p>₹129</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Add more products as needed -->
+  </main>
+
+  <footer>
+    &copy; 2025 D-Mart Online. All rights reserved.
+  </footer>
+
+</body>
+</html>
