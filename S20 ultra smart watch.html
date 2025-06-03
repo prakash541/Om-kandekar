@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy Watch S20 Ultra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .header {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      color: #00ffcc;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #bbbbbb;
+    }
+
+    .product-image {
+      display: block;
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      margin: 20px 0;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+    }
+
+    .features {
+      margin-top: 30px;
+    }
+
+    .features h2 {
+      color: #00ffcc;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      margin: 12px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .features li::before {
+      content: "✔";
+      color: #00ffcc;
+      position: absolute;
+      left: 0;
+    }
+
+    .buy-button {
+      display: block;
+      width: fit-content;
+      margin: 40px auto;
+      padding: 15px 30px;
+      background-color: #00ffcc;
+      color: #121212;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #00ccaa;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Galaxy Watch S20 Ultra</h1>
+      <p>The most advanced smartwatch ever built</p>
+    </div>
+
+    <img src="https://via.placeholder.com/900x400?text=Galaxy+Watch+S20+Ultra" alt="Galaxy Watch S20 Ultra" class="product-image">
+
+    <div class="features">
+      <h2>Top Features</h2>
+      <ul>
+        <li>2.2" Edge-to-Edge AMOLED Display</li>
+        <li>Next-Gen AI Health Suite (Blood Pressure, ECG, Glucose)</li>
+        <li>NeuralWave Voice Assistant & Gesture Control</li>
+        <li>14-Day Battery Life with Nano Solar Boost</li>
+        <li>WearOS 6.0 with Galaxy One UI</li>
+        <li>Military-grade durability (IP69K, MIL-STD-810H)</li>
+        <li>HyperSync with Galaxy Ecosystem</li>
+      </ul>
+    </div>
+
+    <a href="#" class="buy-button">Buy Now</a>
+  </div>
+</body>
+</html>
