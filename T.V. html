@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VisionX 55" 4K Smart TV</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .tv-image {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto 30px;
+      border-radius: 10px;
+    }
+
+    .features {
+      font-size: 18px;
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+    }
+
+    .price {
+      text-align: center;
+      font-size: 28px;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .buy-button {
+      text-align: center;
+    }
+
+    .buy-button a {
+      background-color: #007bff;
+      color: #fff;
+      padding: 14px 30px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .buy-button a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>VisionX 55" 4K Smart TV</h1>
+    <p class="subtitle">Ultra HD | Dolby Audio | Google TV Built-In</p>
+
+    <img src="https://cdn.pixabay.com/photo/2014/04/03/10/32/television-311797_1280.png" alt="Smart TV" class="tv-image">
+
+    <ul class="features">
+      <li>55-inch 4K UHD (3840x2160) Display</li>
+      <li>HDR10+ and Dolby Vision support</li>
+      <li>Google TV with built-in Chromecast</li>
+      <li>Voice Control with Google Assistant</li>
+      <li>3 HDMI Ports, 2 USB Ports, Optical Out</li>
+      <li>20W Stereo Speakers with Dolby Audio</li>
+    </ul>
+
+    <div class="price">Starting at $599</div>
+
+    <div class="buy-button">
+      <a href="#">Buy Now</a>
+    </div>
+  </div>
+
+</body>
+</html>
