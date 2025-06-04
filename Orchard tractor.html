@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orchard Tractors</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f0f0f5;
+      color: #333;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #2e7d32;
+    }
+    .tractor-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .tractor-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+    .tractor-card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #ddd;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Orchard Tractors</h1>
+    <p>Compact, Powerful, and Ideal for Orchard Farming</p>
+  </header>
+
+  <section>
+    <h2>Popular Models</h2>
+    <div class="tractor-list">
+      <div class="tractor-card">
+        <img src="https://example.com/tractor1.jpg" alt="Mahindra Oja 2120 Orchard Tractor">
+        <h3>Mahindra Oja 2120</h3>
+        <p>20 HP tractor specially designed for orchard and vineyard use.</p>
+      </div>
+      <div class="tractor-card">
+        <img src="https://example.com/tractor2.jpg" alt="Sonalika GT 20 Orchard Tractor">
+        <h3>Sonalika GT 20</h3>
+        <p>Compact and fuel-efficient with a narrow wheelbase.</p>
+      </div>
+      <div class="tractor-card">
+        <img src="https://example.com/tractor3.jpg" alt="John Deere 3028EN">
+        <h3>John Deere 3028EN</h3>
+        <p>28 HP tractor with advanced features for orchard farming.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Orchard Tractor Showcase. All rights reserved.
+  </footer>
+</body>
+</html>
