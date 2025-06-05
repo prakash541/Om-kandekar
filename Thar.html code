@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahindra Thar</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eaeaea;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+    }
+    .header {
+      background-color: #8b0000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 26px;
+    }
+    .car-image {
+      width: 100%;
+      display: block;
+    }
+    .content {
+      padding: 20px;
+    }
+    .content h2 {
+      margin-top: 0;
+    }
+    .specs {
+      padding: 0;
+      list-style: none;
+    }
+    .specs li {
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">Mahindra Thar</div>
+    <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/44989/thar-exterior-right-front-three-quarter-2.jpeg" alt="Mahindra Thar" class="car-image">
+    <div class="content">
+      <h2>Specifications:</h2>
+      <ul class="specs">
+        <li>Engine: 2.0L Turbo Petrol / 2.2L Diesel</li>
+        <li>Horsepower: 130–150 HP</li>
+        <li>Transmission: 6-Speed Manual / Automatic</li>
+        <li>Drive Type: 4x4 (Four-Wheel Drive)</li>
+        <li>Roof Type: Hard Top / Convertible</li>
+        <li>Fuel Type: Petrol / Diesel</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
