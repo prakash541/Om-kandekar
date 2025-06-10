@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sahyadri School</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f4f7f8; color: #333; }
+    header { background: #005a9c; color: white; padding: 20px; text-align: center; }
+    nav { background: #0071c5; display: flex; justify-content: center; padding: 10px; }
+    nav a { color: #fff; text-decoration: none; margin: 0 15px; padding: 8px 12px; font-weight: bold; }
+    nav a:hover { background: #005a9c; border-radius: 4px; }
+    .container { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
+    section { background: white; margin-bottom: 30px; padding: 20px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    section h2 { margin-bottom: 15px; color: #005a9c; }
+    ul { list-style: disc inside; }
+    footer { background: #005a9c; color: white; text-align: center; padding: 15px; }
+    @media (max-width: 600px) {
+      nav { flex-direction: column; }
+      nav a { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sahyadri School</h1>
+  <p>Nurturing Excellence in Education • Sangamner, Maharashtra</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#academics">Academics</a>
+  <a href="#campus">Campus Life</a>
+  <a href="#admissions">Admissions</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Sahyadri School, established in Sangamner, Maharashtra, is dedicated to holistic child development, blending academic excellence with cultural and extracurricular enrichment.</p>
+  </section>
+
+  <section id="academics">
+    <h2>Academics</h2>
+    <ul>
+      <li>Affiliated with [State Board/CBSE/ICSE]</li>
+      <li>Grades: Nursery through Grade 10/12</li>
+      <li>Qualified and experienced teaching staff</li>
+      <li>Strong emphasis on STEM, arts, languages, and sports</li>
+    </ul>
+  </section>
+
+  <section id="campus">
+    <h2>Campus & Facilities</h2>
+    <ul>
+      <li>Modern classrooms with smart boards</li>
+      <li>Science & computer laboratories</li>
+      <li>Library with extensive collections & digital access</li>
+      <li>Auditorium, playgrounds, and art studios</li>
+      <li>Transportation and cafeteria facilities</li>
+    </ul>
+  </section>
+
+  <section id="admissions">
+    <h2>Admissions</h2>
+    <p>Admissions open for the academic year 2025–26. For admission forms, fee structure, and eligibility criteria, visit our office or download the brochure from the official site.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> Sahyadri School, Ghulewadi, Sangamner, Ahmednagar – 422608, Maharashtra</p>
+    <p><strong>Phone:</strong> +91-2425-259000 / 259123</p>
+    <p><strong>Email:</strong> <a href="mailto:info@sahyadrischool.edu">info@sahyadrischool.edu</a></p>
+  </section>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Sahyadri School. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
