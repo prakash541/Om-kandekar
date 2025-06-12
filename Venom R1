@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Venom R1 - Hyper Sport Motorcycle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: #e60000;
+      margin: 0;
+      font-size: 3em;
+    }
+    .hero {
+      background: url('https://your-image-url.com/venom-r1.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero h2 {
+      background-color: rgba(0,0,0,0.6);
+      padding: 20px;
+      font-size: 2em;
+      border-radius: 10px;
+    }
+    .content {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .features div {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Venom R1</h1>
+  <p>Unleash the Beast Within</p>
+</header>
+
+<div class="hero">
+  <h2>200HP. 0-60 in 2.9s. Full Aggression.</h2>
+</div>
+
+<div class="content">
+  <h2>Performance & Style</h2>
+  <p>The Venom R1 is built for riders who crave speed, precision, and raw attitude. With a high-performance inline-4 engine and an aerodynamic carbon-fiber body, it dominates roads and racetracks alike.</p>
+  
+  <div class="features">
+    <div>
+      <h3>Top Speed</h3>
+      <p>Over 190 mph</p>
+    </div>
+    <div>
+      <h3>Engine</h3>
+      <p>998cc Liquid-Cooled DOHC</p>
+    </div>
+    <div>
+      <h3>Electronics</h3>
+      <p>Launch Control, ABS, Traction Modes</p>
+    </div>
+    <div>
+      <h3>Design</h3>
+      <p>Matte Black Finish with LED Underglow</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Venom Motors. All rights reserved.
+</footer>
+
+</body>
+</html>
