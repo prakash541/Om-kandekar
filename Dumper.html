@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dumper Truck</title>
+  <style>
+    body {
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .dumper {
+      position: relative;
+      width: 300px;
+      height: 100px;
+      background: #ff9800;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .dumper::before {
+      content: '';
+      position: absolute;
+      left: -50px;
+      top: -40px;
+      width: 100px;
+      height: 70px;
+      background: #795548;
+      transform: skewY(-10deg);
+      border-radius: 5px;
+    }
+
+    .dumper::after {
+      content: '';
+      position: absolute;
+      left: 60px;
+      top: -50px;
+      width: 180px;
+      height: 50px;
+      background: #ff5722;
+      transform: rotate(-10deg);
+      border-radius: 5px;
+    }
+
+    .wheel {
+      position: absolute;
+      bottom: -20px;
+      width: 40px;
+      height: 40px;
+      background: #212121;
+      border-radius: 50%;
+      border: 5px solid #9e9e9e;
+    }
+
+    .wheel.left {
+      left: 40px;
+    }
+
+    .wheel.right {
+      right: 40px;
+    }
+
+    .cabin {
+      position: absolute;
+      left: -40px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      background: #03a9f4;
+      border-radius: 5px;
+    }
+
+    .window {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 40px;
+      height: 30px;
+      background: #b3e5fc;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dumper">
+    <div class="cabin">
+      <div class="window"></div>
+    </div>
+    <div class="wheel left"></div>
+    <div class="wheel right"></div>
+  </div>
+</body>
+</html>
