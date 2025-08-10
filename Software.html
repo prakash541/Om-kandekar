@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Software — Fast, Simple, Delightful</title>
+  <meta name="description" content="Landing page and UI shell for My Software — responsive, accessible, and ready to customize." />
+
+  <!-- Optional: Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0f1724;         /* dark background */
+      --panel: #0b1220;
+      --muted: #94a3b8;
+      --accent: #7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --card: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      --radius: 14px;
+      --maxwidth: 1100px;
+      color-scheme: dark;
+      color: #e6eef8;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Light mode variables (will be toggled by JS) */
+    :root.light {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --muted: #475569;
+      --accent: #6d28d9;
+      --glass: rgba(2,6,23,0.02);
+      color: #041122;
+      color-scheme: light;
+    }
+
+    html,body { height:100%; margin:0; background:linear-gradient(180deg,var(--bg), #071023 120%); }
+    .container { max-width:var(--maxwidth); margin:32px auto; padding:24px; }
+
+    header {
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; margin-bottom:28px;
+    }
+    .brand {
+      display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit;
+    }
+    .logo {
+      width:44px; height:44px; border-radius:10px;
+      background:conic-gradient(from 210deg at 50% 50%, var(--accent), #3b82f6, #06b6d4);
+      box-shadow:0 6px 18px rgba(12,12,20,0.6);
+      display:grid; place-items:center; font-weight:700; color:#fff;
+    }
+    nav { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    nav a { color:var(--muted); text-decoration:none; font-weight:600; font-size:14px; padding:8px 12px; border-radius:10px; }
+    nav a.primary { background:var(--glass); color:var(--accent); }
+
+    .hero {
+      display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:start;
+    }
+    .card {
+      background:var(--panel);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    .title { font-size:28px; margin:0 0 8px; line-height:1.04; letter-spacing:-0.3px; }
+    .subtitle { color:var(--muted); margin:0 0 16px; font-size:15px; }
+
+    .cta-row { display:flex; gap:12px; margin-top:14px; }
+    .btn {
+      border:0; padding:10px 14px; border-radius:10px; font-weight:700; cursor:pointer;
+      background:linear-gradient(90deg,var(--accent), #4f46e5);
+      color:white; box-shadow: 0 6px 18px rgba(124,58,237,0.22);
+    }
+    .btn.ghost { background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04); }
+
+    /* Feature grid */
+    .features { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px; }
+    .feature { background:var(--card); padding:14px; border-radius:12px; font-size:14px; }
+    .feature h4 { margin:0 0 6px; font-size:15px; }
+    .feature p { margin:0; color:var(--muted); font-size:13px; line-height:1.4; }
+
+    /* Right-side preview */
+    .preview {
+      display:flex; flex-direction:column; gap:12px;
+    }
+    .app-window {
+      height:380px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#071023, #081426);
+      border:1px solid rgba(255,255,255,0.03); display:flex; flex-direction:column;
+    }
+    .app-top { padding:12px; display:flex; align-items:center; gap:8px; }
+    .dot { width:11px; height:11px; border-radius:999px; background:#ff6b6b; box-shadow:0 0 0 5px rgba(255,107,107,0.03) inset; }
+    .app-body { padding:18px; flex:1; display:flex; gap:12px; }
+    .left { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .panel { background:var(--glass); padding:12px; border-radius:10px; color:var(--muted); font-size:13px; flex:1; overflow:auto; }
+
+    footer { margin-top:28px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero { grid-template-columns:1fr; }
+      .features { grid-template-columns:repeat(2,1fr); }
+      .app-window { height:300px; }
+    }
+    @media (max-width:560px){
+      .features { grid-template-columns:1fr; }
+      nav{ display:none; }
+      .container{ padding:16px; }
+    }
+
+    /* small util classes */
+    .muted { color:var(--muted); }
+    .kbd { display:inline-block; padding:6px 8px; border-radius:8px; background:rgba(0,0,0,0.18); font-weight:700; font-size:12px; }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <a class="brand" href="#" aria-label="My Software Home">
+        <div class="logo">MS</div>
+        <div>
+          <div style="font-weight:700">My Software</div>
+          <div class="muted" style="font-size:12px">Simple tools for complex workflows</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+        <a class="primary" id="theme-toggle" href="#" role="button" aria-pressed="false">Toggle Light</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="card" style="padding-bottom:16px;">
+        <h1 id="hero-title" class="title">A faster way to build, test, and ship software</h1>
+        <p class="subtitle">Local-first, cloud-friendly, and built for teams that value clarity. Try the demo, download the binary, or explore the docs.</p>
+
+        <div class="cta-row">
+          <button class="btn" id="download-btn" aria-label="Download the software">Download (macOS)</button>
+          <button class="btn ghost" id="open-demo">Open demo</button>
+        </div>
+
+        <div class="features" id="features" style="margin-top:20px;">
+          <div class="feature">
+            <h4>Lightning Fast</h4>
+            <p>Optimized startup and incremental builds so you iterate faster.</p>
+          </div>
+          <div class="feature">
+            <h4>Secure Sync</h4>
+            <p>End-to-end encryption for team collaboration and backups.</p>
+          </div>
+          <div class="feature">
+            <h4>Extensible</h4>
+            <p>Plugins, a clear API, and first-class CLI tools for automation.</p>
+          </div>
+          <div class="feature">
+            <h4>CLI & GUI</h4>
+            <p>Powerful command-line interface plus a simple GUI for visual tasks.</p>
+          </div>
+          <div class="feature">
+            <h4>Telemetry Opt-In</h4>
+            <p>Privacy-first by default. You choose what to share.</p>
+          </div>
+          <div class="feature">
+            <h4>Cross-Platform</h4>
+            <p>Binaries for macOS, Windows, and Linux. Container-friendly.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="preview" aria-label="App preview">
+        <div class="app-window card" aria-hidden="false">
+          <div class="app-top">
+            <div style="display:flex;gap:8px; align-items:center">
+              <span class="dot" aria-hidden="true"></span>
+              <span class="dot" style="background:#f6c85f"></span>
+              <span class="dot" style="background:#34d399"></span>
+            </div>
+            <div style="margin-left:auto; color:var(--muted); font-size:13px">v1.4.0</div>
+          </div>
+
+          <div class="app-body">
+            <div class="left">
+              <div class="panel" id="log-panel" aria-live="polite">
+                <div style="font-weight:700; margin-bottom:8px">Activity</div>
+                <div id="log-entries" style="font-size:13px; color:var(--muted)">
+                  <div>Ready — click "Run" to start demo.</div>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:8px;">
+                <button class="btn" id="run-btn" style="flex:1">Run</button>
+                <button class="btn ghost" id="stop-btn" style="flex:1">Stop</button>
+              </div>
+            </div>
+
+            <div class="panel" style="width:220px; min-width:180px;">
+              <div style="font-weight:700; margin-bottom:8px">Status</div>
+              <div id="status">Idle</div>
+              <hr style="opacity:0.06; margin:10px 0">
+              <div style="font-size:13px; color:var(--muted)">Shortcuts</div>
+              <div style="margin-top:8px"><span class="kbd">R</span> run · <span class="kbd">S</span> stop</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <div style="font-weight:700">Ready to try?</div>
+            <div class="muted" style="font-size:13px">Get started in seconds — local-first installation.</div>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn" id="download-small">Download</button>
+            <a href="#docs" class="btn ghost">Docs</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> My Software — Built with care</div>
+      <div class="muted">Made for teams • Docs • Support</div>
+    </footer>
+  </div>
+
+  <script>
+    // small interactive logic: theme toggle, demo run, keyboard shortcuts
+    (function(){
+      const root = document.documentElement;
+      const toggle = document.getElementById('theme-toggle');
+      const yearEl = document.getElementById('year');
+      yearEl.textContent = new Date().getFullYear();
+
+      // load saved theme
+      const saved = localStorage.getItem('theme');
+      if(saved === 'light') {
+        root.classList.add('light');
+        toggle.textContent = 'Toggle Dark';
+        toggle.setAttribute('aria-pressed','true');
+      }
+
+      toggle.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const isLight = root.classList.toggle('light');
+        toggle.textContent = isLight ? 'Toggle Dark' : 'Toggle Light';
+        toggle.setAttribute('aria-pressed', String(isLight));
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      });
+
+      // Demo run/stop
+      const logEntries = document.getElementById('log-entries');
+      const status = document.getElementById('status');
+      let running = false;
+      let stepTimer = null;
+
+      function appendLog(msg){
+        const d = document.createElement('div');
+        d.textContent = [${new Date().toLocaleTimeString()}] ${msg};
+        logEntries.prepend(d);
+      }
+
+      function startDemo(){
+        if(running) return;
+        running = true;
+        status.textContent = 'Running';
+        appendLog('Demo started — initializing modules...');
+        let i = 0;
+        stepTimer = setInterval(()=>{
+          i++;
+          appendLog('Step ' + i + ': task completed.');
+          if(i >= 6){
+            appendLog('All demo tasks finished successfully.');
+            stopDemo();
+          }
+        }, 850);
+      }
+
+      function stopDemo(){
+        if(!running) return;
+        running = false;
+        status.textContent = 'Stopped';
+        clearInterval(stepTimer);
+        appendLog('Demo stopped by user.');
+      }
+
+      document.getElementById('run-btn').addEventListener('click', startDemo);
+      document.getElementById('stop-btn').addEventListener('click', stopDemo);
+      document.getElementById('open-demo').addEventListener('click', (e)=>{
+        e.preventDefault();
+        startDemo();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Download buttons: simple simulated behavior
+      function downloadMock(platform){
+        appendLog('Preparing download for ' + (platform || 'macOS') + '...');
+        setTimeout(()=> {
+          appendLog('Download ready. (This is a demo button; wire it to your release assets.)');
+          alert('Download simulated — replace with your binary link or update handler.');
+        }, 700);
+      }
+      document.getElementById('download-btn').addEventListener('click', ()=> downloadMock('macOS'));
+      document.getElementById('download-small').addEventListener('click', ()=> downloadMock());
+
+      // keyboard shortcuts
+      document.addEventListener('keydown', (ev)=>{
+        if(ev.key === 'r' || ev.key === 'R') { startDemo(); }
+        if(ev.key === 's' || ev.key === 'S') { stopDemo(); }
+      });
+
+      // Accessibility: ensure focus outline visible on keyboard nav only
+      function detectsKeyboardNav(e){
+        if(e.key === 'Tab') document.documentElement.classList.add('show-focus');
+      }
+      window.addEventListener('keydown', detectsKeyboardNav, { once:true });
+
+    })();
+  </script>
+</body>
+</html>
